@@ -1,52 +1,89 @@
-import React, { useState } from "react";
-import { MaxWidthWrapper } from "../utils/MaxWidthWrapper";
-import { NavLogo } from "./NavLogo";
-import { NavLinks } from "./NavLinks";
-import { NavCTAs } from "./NavCTAs";
-import { useMotionValueEvent, useScroll, motion } from "framer-motion";
+"use client";
+import {
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
+  Navbar,
+  NavbarButton,
+  NavbarLogo,
+  NavBody,
+  NavItems,
+} from "@/components/ui/resizable-navbar";
+// import { scrollToQuoteForm } from "@/utils/scrollToPromotionForm";
+import { useState } from "react";
 
-export const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const { scrollY } = useScroll();
+export function MainNav() {
+  const navItems = [
+    {
+      name: "About",
+      link: "/about-us",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+    {
+      name: "Partners",
+      link: "/become-a-partner",
+    },
+  ];
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 150) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <motion.nav
-      initial={{
-        opacity: 0,
-        y: "-100%",
-      }}
-      animate={{
-        opacity: 1,
-        y: "0%",
-      }}
-      transition={{
-        duration: 1.25,
-        ease: "easeInOut",
-      }}
-      className={`fixed left-0 right-0 top-0 z-50 bg-zinc-950/0 py-3 transition-colors ${scrolled && "bg-zinc-950/80 backdrop-blur"}`}
-    >
-      <MaxWidthWrapper>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            <NavLogo />
-            <div className="hidden md:block">
-              <NavLinks />
-            </div>
+    <div className="relative w-full">
+      <Navbar>
+        {/* Desktop Navigation */}
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          <div className="flex items-center gap-4">
+            <NavbarButton variant="primary">Get A Quote</NavbarButton>
           </div>
-          <NavCTAs />
-        </div>
-        <div className="block pt-1.5 md:hidden">
-          <NavLinks />
-        </div>
-      </MaxWidthWrapper>
-    </motion.nav>
+        </NavBody>
+
+        {/* Mobile Navigation */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </MobileNavHeader>
+
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          >
+            {navItems.map((item, idx) => (
+              <a
+                key={`mobile-link-${idx}`}
+                href={item.link}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative text-neutral-600 dark:text-neutral-300"
+              >
+                <span className="block">{item.name}</span>
+              </a>
+            ))}
+            <div className="flex w-full flex-col gap-4">
+              <NavbarButton
+                onClick={() => {
+                  // scrollToQuoteForm();
+                  setIsMobileMenuOpen(false);
+                }}
+                variant="primary"
+                className="w-full"
+              >
+                Get A Quote
+              </NavbarButton>
+            </div>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+
+      {/* Navbar */}
+    </div>
   );
-};
+}
