@@ -4,10 +4,11 @@ import Carousel from "@/components/features/carousel/Carousel";
 import { CodeDemo } from "@/components/features/code/CodeDemo";
 import { FeatureGrid } from "@/components/features/grid/FeatureGrid";
 import { Stats } from "@/components/features/stats/Stats";
+import { FiftyFiftyCard } from "@/components/fiftyFiftyCard/fiftyFiftyCard";
 import { Footer } from "@/components/footer/Footer";
 import { Hero } from "@/components/hero/Hero";
-import { Logos } from "@/components/logos/Logos";
 import { Pricing } from "@/components/pricing/Pricing";
+import { TrustedAcrossUK } from "@/components/trustedAcrossUK/TrustedAcrossUK";
 import { Barlow } from "next/font/google";
 
 const barlowFont = Barlow({
@@ -20,13 +21,13 @@ export default function Home() {
   return (
     <main className={barlowFont.className}>
       <Hero />
-      <Logos />
+      <TrustedAcrossUK />
       <FeatureGrid />
       <CodeDemo />
       <Carousel />
       <Customers />
       <Stats />
-      <Pricing />
+      <FiftyFiftyCard />
       <CTA />
       <Footer />
     </main>

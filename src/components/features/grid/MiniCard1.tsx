@@ -1,22 +1,26 @@
-import React from "react";
-import { Card } from "../../utils/Card";
-import { CalloutChip } from "../../utils/CalloutChip";
-import { motion } from "framer-motion";
-import { FiLink } from "react-icons/fi";
 import { BubbleButton } from "@/components/buttons/BubbleButton";
+import { motion } from "framer-motion";
+import React from "react";
+import { FiTruck } from "react-icons/fi";
+import { CalloutChip } from "../../utils/CalloutChip";
+import { Card } from "../../utils/Card";
 
 export const MiniCard1 = () => {
   return (
     <div className="col-span-2 h-[375px] md:col-span-1">
       <Card>
-        <div className="mx-auto w-fit">
-          <CalloutChip>Callout #2</CalloutChip>
-        </div>
-        <p className="mb-1.5 text-center text-2xl">Highlight something cool</p>
-        <p className="mb-6 text-center text-zinc-400">Short and sweet.</p>
-        <BubbleButton className="mx-auto">Call to action</BubbleButton>
+        <CalloutChip>Fair payment terms</CalloutChip>
+        <p className="mb-1.5 text-center text-2xl">
+          Reliable payments you can count on
+        </p>
+        <p className="mb-6 text-center text-zinc-400">
+          We believe trust starts with transparency — fair payment terms and
+          consistent cashflow for every subcontractor we work with.
+        </p>
 
-        <Ping />
+        <BubbleButton className="mx-auto">Learn more</BubbleButton>
+
+        <FreightPing />
       </Card>
     </div>
   );
@@ -24,10 +28,13 @@ export const MiniCard1 = () => {
 
 const LOOP_DURATION = 6;
 
-const Ping = () => {
+const FreightPing = () => {
   return (
     <div className="absolute bottom-0 left-1/2 w-fit -translate-x-1/2 translate-y-1/2">
-      <FiLink className="relative z-10 text-7xl text-blue-200" />
+      {/* Central truck icon */}
+      <FiTruck className="relative z-10 text-7xl text-amber-300 drop-shadow-[0_0_12px_rgba(251,191,36,0.5)]" />
+
+      {/* Pulsing rings */}
       <Band delay={0} />
       <Band delay={LOOP_DURATION * 0.25} />
       <Band delay={LOOP_DURATION * 0.5} />
@@ -59,7 +66,7 @@ const Band = ({ delay }: { delay: number }) => {
         ease: "linear",
         delay,
       }}
-      className="absolute left-[50%] top-[50%] z-0 size-80 rounded-full border border-blue-600 bg-gradient-to-br from-blue-600/50 to-blue-950/20"
+      className="absolute left-[50%] top-[50%] z-0 size-80 rounded-full border border-amber-600/60 bg-gradient-to-br from-amber-500/40 to-amber-900/20"
     />
   );
 };

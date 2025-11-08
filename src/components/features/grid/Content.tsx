@@ -1,29 +1,29 @@
 import { MaxWidthWrapper } from "@/components/utils/MaxWidthWrapper";
+import { SectionHeading } from "@/components/utils/SectionHeading";
+import { SectionHeadingSpacing } from "@/components/utils/SectionHeadingSpacing";
+import { SectionSubheading } from "@/components/utils/SectionSubheading";
 import React from "react";
-import { Tower } from "./Tower";
+import { LongCard } from "./LongCard";
 import { MiniCard1 } from "./MiniCard1";
 import { MiniCard2 } from "./MiniCard2";
-import { LongCard } from "./LongCard";
 import { SimpleGrid } from "./SimpleGrid";
-import { SectionHeading } from "@/components/utils/SectionHeading";
-import { SectionSubheading } from "@/components/utils/SectionSubheading";
-import { SectionHeadingSpacing } from "@/components/utils/SectionHeadingSpacing";
+import { Tower } from "./Tower";
 
 export const Content = () => {
   return (
-    <section>
+    <section className="relative bg-gradient-to-b from-zinc-950 to-zinc-900">
       <MaxWidthWrapper className="relative z-20 pb-20 pt-20 md:pb-28 md:pt-40">
         <SectionHeadingSpacing>
           <SectionHeading>
-            Show the people
+            Smarter haulage connections
             <br />
             <span className="bg-gradient-to-br from-blue-400 to-blue-700 bg-clip-text text-transparent">
-              what makes you great
+              built for efficiency and trust
             </span>
           </SectionHeading>
           <SectionSubheading>
-            Here's a good way to show some high levels pros as to what your
-            product does and for who.
+            We simplify how loads get matched with the right subcontractors —
+            saving time, cutting empty miles, and reducing fuel waste.
           </SectionSubheading>
         </SectionHeadingSpacing>
 

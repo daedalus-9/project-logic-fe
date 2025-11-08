@@ -6,12 +6,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { IconType } from "react-icons";
 import {
-  FiArrowLeft,
-  FiArrowRight,
-  FiArrowUp,
-  FiBox,
+  FiCheckCircle,
+  FiClock,
+  FiMapPin,
   FiPhone,
-  FiShield,
+  FiTruck,
   FiUsers,
 } from "react-icons/fi";
 import useMeasure from "react-use-measure";
@@ -33,22 +32,17 @@ const Carousel = () => {
     width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
 
   const CAN_SHIFT_LEFT = offset < 0;
-
   const CAN_SHIFT_RIGHT =
     Math.abs(offset) < CARD_SIZE * (features.length - CARD_BUFFER);
 
   const shiftLeft = () => {
-    if (!CAN_SHIFT_LEFT) {
-      return;
-    }
-    setOffset((pv) => (pv += CARD_SIZE));
+    if (!CAN_SHIFT_LEFT) return;
+    setOffset((pv) => pv + CARD_SIZE);
   };
 
   const shiftRight = () => {
-    if (!CAN_SHIFT_RIGHT) {
-      return;
-    }
-    setOffset((pv) => (pv -= CARD_SIZE));
+    if (!CAN_SHIFT_RIGHT) return;
+    setOffset((pv) => pv - CARD_SIZE);
   };
 
   return (
@@ -60,10 +54,10 @@ const Carousel = () => {
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="mb-12 flex flex-col items-center justify-between gap-6 md:flex-row md:items-end">
             <div className="space-y-3">
-              <SectionHeading>Dive into the specifics</SectionHeading>
+              <SectionHeading>Why Logic Freight</SectionHeading>
               <SectionSubheading>
-                Anything else you want to show off? What are you proud of? What
-                makes you different? Show it off here!
+                See the features that make our freight matching and delivery
+                service fast, reliable, and secure.
               </SectionSubheading>
             </div>
             <div className="flex items-center gap-2">
@@ -74,7 +68,7 @@ const Carousel = () => {
                 disabled={!CAN_SHIFT_LEFT}
                 onClick={shiftLeft}
               >
-                <FiArrowLeft />
+                &larr;
               </button>
               <button
                 className={`rounded-lg border-[1px] border-zinc-700 bg-zinc-900 p-1.5 text-2xl transition-opacity ${
@@ -83,25 +77,21 @@ const Carousel = () => {
                 disabled={!CAN_SHIFT_RIGHT}
                 onClick={shiftRight}
               >
-                <FiArrowRight />
+                &rarr;
               </button>
             </div>
           </div>
           <motion.div
-            animate={{
-              x: offset,
-            }}
-            transition={{
-              ease: "easeInOut",
-            }}
+            animate={{ x: offset }}
+            transition={{ ease: "easeInOut" }}
             className="grid"
             style={{
               gridTemplateColumns: `repeat(${features.length}, 1fr)`,
             }}
           >
-            {features.map((post) => {
-              return <Feature key={post.id} {...post} />;
-            })}
+            {features.map((post) => (
+              <Feature key={post.id} {...post} />
+            ))}
           </motion.div>
         </div>
       </div>
@@ -139,37 +129,44 @@ type FeatureType = {
 const features: FeatureType[] = [
   {
     id: 1,
-    Icon: FiArrowUp,
-    title: "Fast & accurate reporting",
+    Icon: FiMapPin,
+    title: "Smart Load Matching",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "Instantly match your freight with the right drivers in your area.",
   },
   {
     id: 2,
-    Icon: FiShield,
-    title: "A+ Security",
+    Icon: FiTruck,
+    title: "Reliable Hauliers",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "Work with vetted drivers who know the routes and respect schedules.",
   },
   {
     id: 3,
-    Icon: FiUsers,
-    title: "World class teams",
+    Icon: FiClock,
+    title: "Real-Time Tracking",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "Track your deliveries in real time so you always know where your load is.",
   },
   {
     id: 4,
-    Icon: FiPhone,
-    title: "Best in class support",
+    Icon: FiCheckCircle,
+    title: "Verified Deliveries",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "Confirm successful delivery with proof-of-service updates from drivers.",
   },
   {
     id: 5,
-    Icon: FiBox,
-    title: "All-in-one product",
+    Icon: FiUsers,
+    title: "Expert Support",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "Our logistics team is ready to help whenever you need assistance.",
+  },
+  {
+    id: 6,
+    Icon: FiPhone,
+    title: "24/7 Contact",
+    description:
+      "Reach out anytime to manage urgent loads or changes in schedule.",
   },
 ];
