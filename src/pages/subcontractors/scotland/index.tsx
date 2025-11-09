@@ -34,15 +34,15 @@ export default function Scotland() {
       <Stats />
 
       <CoverageAreas
-        title="Scotland Haulage & Tautliner Coverage"
-        description="Logic Freight connects Scotland’s busiest logistics hubs — from Aberdeen to the Central Belt — to key cities across England and Wales. Our tautliner and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
+        title="Scotland Haulage"
+        description="Logic Freight connects Scotland’s busiest logistics hubs — from Inverness to the Central Belt — to key cities across England and Wales. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
         areas={scotlandRoutes}
         region="Scotland"
       />
       <EnquiryForm region="Scotland" />
 
       <GradientGrid />
-      <Footer />
+  
     </main>
   );
 }

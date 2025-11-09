@@ -1,4 +1,5 @@
 "use client";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
@@ -15,7 +16,7 @@ export function EnquiryForm({
 }: EnquiryFormProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    console.log("Truck placement submitted");
   };
 
   return (
@@ -27,9 +28,10 @@ export function EnquiryForm({
       )}
     >
       <h2 className="text-2xl font-bold text-neutral-800 sm:text-3xl md:text-4xl dark:text-neutral-200">
-        Get a Haulage Quote in {region}
+        Place a Truck in {region}
       </h2>
 
+      {/* Contact Options */}
       <div className="flex flex-col gap-4 md:flex-row md:gap-6">
         <a
           href="tel:01633441457"
@@ -46,9 +48,11 @@ export function EnquiryForm({
         </a>
       </div>
 
+      {/* Form */}
       <form className="my-10 space-y-6" onSubmit={handleSubmit}>
         <input type="hidden" name="region" value={region} />
 
+        {/* Name & Company */}
         <div className="flex flex-col gap-4 md:flex-row md:gap-6">
           <LabelInputContainer>
             <Label htmlFor="fullname" className="text-base md:text-lg">
@@ -56,7 +60,7 @@ export function EnquiryForm({
             </Label>
             <Input
               id="fullname"
-              placeholder="Tyler"
+              placeholder="John Smith"
               type="text"
               className="h-12 text-base md:h-14 md:text-lg"
               required
@@ -69,13 +73,14 @@ export function EnquiryForm({
             </Label>
             <Input
               id="companyname"
-              placeholder="Durden Logistics"
+              placeholder="John's Logistics"
               type="text"
               className="h-12 text-base md:h-14 md:text-lg"
             />
           </LabelInputContainer>
         </div>
 
+        {/* Contact Info */}
         <div className="flex flex-col gap-4 md:flex-row md:gap-6">
           <LabelInputContainer>
             <Label htmlFor="email" className="text-base md:text-lg">
@@ -83,7 +88,7 @@ export function EnquiryForm({
             </Label>
             <Input
               id="email"
-              placeholder="projectmayhem@fc.com"
+              placeholder="johnsmith@gmail.com"
               type="email"
               className="h-12 text-base md:h-14 md:text-lg"
               required
@@ -103,49 +108,64 @@ export function EnquiryForm({
           </LabelInputContainer>
         </div>
 
+        {/* Truck Placement Details */}
         <div className="flex flex-col gap-4 md:flex-row md:gap-6">
           <LabelInputContainer>
-            <Label htmlFor="pickup" className="text-base md:text-lg">
-              Pickup location
+            <Label htmlFor="location" className="text-base md:text-lg">
+              Truck location
             </Label>
             <Input
-              id="pickup"
-              placeholder={`e.g. Glasgow`}
+              id="location"
+              placeholder={`Location in ${region}`}
               type="text"
               className="h-12 text-base md:h-14 md:text-lg"
+              required
             />
           </LabelInputContainer>
 
           <LabelInputContainer>
-            <Label htmlFor="delivery" className="text-base md:text-lg">
-              Delivery location
+            <Label htmlFor="availableFrom" className="text-base md:text-lg">
+              Available from
             </Label>
             <Input
-              id="delivery"
-              placeholder={`e.g. Birmingham`}
-              type="text"
+              id="availableFrom"
+              type="date"
+              className="h-12 text-base md:h-14 md:text-lg"
+              required
+            />
+          </LabelInputContainer>
+
+          <LabelInputContainer>
+            <Label htmlFor="availableUntil" className="text-base md:text-lg">
+              Available until
+            </Label>
+            <Input
+              id="availableUntil"
+              type="date"
               className="h-12 text-base md:h-14 md:text-lg"
             />
           </LabelInputContainer>
         </div>
 
+        {/* Notes */}
         <LabelInputContainer>
           <Label htmlFor="message" className="text-base md:text-lg">
-            Message
+            Additional info
           </Label>
           <Input
             id="message"
-            placeholder={`Type your message about haulage in ${region}...`}
+            placeholder={`Type any extra details about your truck placement in ${region}...`}
             type="text"
             className="h-12 text-base md:h-14 md:text-lg"
           />
         </LabelInputContainer>
 
+        {/* Submit */}
         <button
           className="group/btn relative block h-12 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 text-lg font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] transition-transform duration-200 hover:scale-[1.02] md:h-14 md:text-xl dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Request Quote →
+          Submit Placement →
           <BottomGradient />
         </button>
 

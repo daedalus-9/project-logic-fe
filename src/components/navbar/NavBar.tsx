@@ -1,14 +1,18 @@
+"use client";
+
 import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import Link from "next/link";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { FaMailBulk } from "react-icons/fa";
 import { FiArrowRight, FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
+// -------- NAV --------
 const FlyoutNav = () => {
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
@@ -26,7 +30,14 @@ const FlyoutNav = () => {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <img src="/assets/images/logo.png" alt="logo" width={200} height={90} />
+        <Link href="/">
+          <img
+            src="/assets/images/logo.png"
+            alt="logo"
+            width={200}
+            height={90}
+          />
+        </Link>
         <div className="hidden gap-6 lg:flex">
           <Links />
           <CTAs />
@@ -38,7 +49,6 @@ const FlyoutNav = () => {
 };
 
 // -------- NAV LINKS --------
-
 const Links = () => (
   <div className="flex items-center gap-6">
     {LINKS.map((l) => (
@@ -76,7 +86,7 @@ const NavLink = ({
       </a>
 
       <AnimatePresence>
-        {showFlyout && (
+        {showFlyout && FlyoutContent && (
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,7 +94,7 @@ const NavLink = ({
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="absolute left-1/2 top-12 w-[400px] -translate-x-1/2 rounded-lg bg-white text-black shadow-xl"
           >
-            <FlyoutContent />
+            <FlyoutContent setMenuOpen={() => setOpen(false)} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -93,7 +103,6 @@ const NavLink = ({
 };
 
 // -------- CTA BUTTONS --------
-
 const CTAs = () => (
   <div className="flex items-center gap-3">
     <button className="flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-black">
@@ -107,92 +116,58 @@ const CTAs = () => (
 );
 
 // -------- FLYOUT CONTENTS --------
-
-const SubcontractorsContent = () => (
+const SubcontractorsContent = ({
+  setMenuOpen,
+}: {
+  setMenuOpen: Dispatch<SetStateAction<boolean>>;
+}) => (
   <div className="grid grid-cols-3 gap-6 p-6">
     <div>
       <h3 className="mb-2 font-semibold">Scotland</h3>
-      <a href="/subcontractors/scotland" className="block text-sm hover:underline">
-        All Scotland
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Aberdeen
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Glasgow
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Edinburgh
-      </a>
+      <Link
+        href="/subcontractors/scotland"
+        onClick={() => setMenuOpen(false)}
+        className="block text-sm hover:underline"
+      >
+        Scotland Routes
+      </Link>
     </div>
 
     <div>
       <h3 className="mb-2 font-semibold">England</h3>
-      <a href="#" className="block text-sm hover:underline">
-        North East
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        North West
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Midlands
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        South
-      </a>
+      <Link
+        href="/subcontractors/england"
+        onClick={() => setMenuOpen(false)}
+        className="block text-sm hover:underline"
+      >
+        England Routes
+      </Link>
     </div>
 
     <div>
       <h3 className="mb-2 font-semibold">Wales</h3>
-      <a href="#" className="block text-sm hover:underline">
-        North Wales
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        South Wales
-      </a>
-    </div>
-  </div>
-);
-
-const CustomersContent = () => (
-  <div className="grid grid-cols-3 gap-6 p-6">
-    <div>
-      <h3 className="mb-2 font-semibold">Scotland</h3>
-      <a href="#" className="block text-sm hover:underline">
-        Haulage
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Pallet Delivery
-      </a>
+      <Link
+        href="/subcontractors/wales"
+        onClick={() => setMenuOpen(false)}
+        className="block text-sm hover:underline"
+      >
+        Wales Routes
+      </Link>
     </div>
 
-    <div>
-      <h3 className="mb-2 font-semibold">England</h3>
-      <a href="#" className="block text-sm hover:underline">
-        North East
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Midlands
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        South
-      </a>
-    </div>
-
-    <div>
-      <h3 className="mb-2 font-semibold">Wales</h3>
-      <a href="#" className="block text-sm hover:underline">
-        Cardiff
-      </a>
-      <a href="#" className="block text-sm hover:underline">
-        Swansea
-      </a>
+    <div className="col-span-3 mt-4 text-center">
+      <Link
+        href="/subcontractors/join"
+        onClick={() => setMenuOpen(false)}
+        className="inline-block rounded-md bg-emerald-500 px-6 py-2 text-lg font-semibold text-black hover:bg-emerald-600"
+      >
+        Join as a Haulier
+      </Link>
     </div>
   </div>
 );
 
 // -------- MOBILE MENU --------
-
 const MobileMenuLink = ({
   children,
   href,
@@ -243,7 +218,7 @@ const MobileMenuLink = ({
           className="overflow-hidden"
         >
           <div ref={ref}>
-            <FoldContent />
+            <FoldContent setMenuOpen={setMenuOpen} />
           </div>
         </motion.div>
       )}
@@ -305,17 +280,11 @@ const MobileMenu = () => {
 };
 
 // -------- LINK STRUCTURE --------
-
 const LINKS = [
   {
     text: "Subcontractors",
-    href: "#",
+    href: "/subcontractors",
     component: SubcontractorsContent,
-  },
-  {
-    text: "Customers",
-    href: "#",
-    component: CustomersContent,
   },
 ];
 

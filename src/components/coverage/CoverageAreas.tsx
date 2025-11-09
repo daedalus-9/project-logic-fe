@@ -87,7 +87,7 @@ const ScheduleItem = ({
         }}
         className="flex items-center justify-center gap-2 whitespace-nowrap"
       >
-        Get a quote <FiArrowRight />
+        Place A Truck <FiArrowRight />
       </SplashButton>
     </motion.div>
   );
