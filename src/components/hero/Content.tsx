@@ -5,6 +5,7 @@ import { GhostButton } from "../buttons/GhostButton";
 import { SplashButton } from "../buttons/SplashButton";
 import { GlowingChip } from "../utils/GlowingChip";
 import { MaxWidthWrapper } from "../utils/MaxWidthWrapper";
+import { scrollToForm } from "../utils/scrollToForm";
 
 const Content = () => {
   const router = useRouter();
@@ -46,7 +47,7 @@ const Content = () => {
         className="flex flex-col items-center gap-4 sm:flex-row"
       >
         <SplashButton
-          onClick={() => router.push("/get-started")}
+          onClick={() => scrollToForm()}
           className="flex items-center gap-2"
         >
           Get started

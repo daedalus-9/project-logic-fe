@@ -3,10 +3,12 @@ import { SectionHeading } from "@/components/utils/SectionHeading";
 import { SectionHeadingSpacing } from "@/components/utils/SectionHeadingSpacing";
 import { SectionSubheading } from "@/components/utils/SectionSubheading";
 import React from "react";
-import { FiTruck } from "react-icons/fi";
+import { FiArrowRight, FiTruck } from "react-icons/fi";
 import { Minigrid } from "../../utils/Minigrid";
 import { CodeCard } from "./CodeCard";
 import { Stepper } from "./Stepper";
+import { SplashButton } from "@/components/buttons/SplashButton";
+import { scrollToForm } from "@/components/utils/scrollToForm";
 
 export const CodeDemo = () => {
   return (
@@ -28,6 +30,13 @@ export const CodeDemo = () => {
 
         <CodeCard />
         <Stepper />
+        <SplashButton
+          onClick={() => scrollToForm()}
+          className="flex items-center gap-2"
+        >
+          Get started
+          <FiArrowRight />
+        </SplashButton>
       </MaxWidthWrapper>
       <Minigrid />
     </section>

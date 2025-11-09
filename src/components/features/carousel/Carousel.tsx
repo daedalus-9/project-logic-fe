@@ -95,7 +95,7 @@ const Carousel = () => {
           </motion.div>
         </div>
       </div>
-
+            
       <CornerBlur />
     </section>
   );
