@@ -6,7 +6,7 @@ Allow: /
 # Disallow: /private-directory/
 
 # Host
-Host: https://www.supernovadental.co.uk
+Host: https://www.logic-freight.co.uk
 
 # Sitemap location
-Sitemap: https://www.supernovadental.co.uk/sitemap.xml
+Sitemap: https://www.logic-freight.co.uk/sitemap.xml
