@@ -23,7 +23,11 @@ export default function Footer() {
           {/* Telephone Section */}
           <ul className="flex flex-col items-center gap-1 sm:items-start">
             <li className="text-lg font-semibold uppercase">Telephone</li>
-            <li>Newport 01633 441457</li>
+            <li>
+              <a href="tel:01633441457" className="underline hover:text-white">
+                Newport 01633 441457
+              </a>
+            </li>
           </ul>
 
           {/* Email Section */}
@@ -49,13 +53,19 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href="/partners" className="underline hover:text-white">
-                Partners
+              <Link
+                href="/subcontractors"
+                className="underline hover:text-white"
+              >
+                Subcontractors
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="underline hover:text-white">
-                Contact
+              <Link
+                href="/privacy-policy"
+                className="underline hover:text-white"
+              >
+                Privacy Policy
               </Link>
             </li>
           </ul>
