@@ -88,7 +88,7 @@ export function PartnerJoinForm({
           </Label>
           <Input
             id="fullname"
-            placeholder="John Doe"
+            placeholder="John Smith"
             type="text"
             value={formData.fullname}
             onChange={handleChange}
