@@ -4,6 +4,7 @@ import React from "react";
 import { FiTruck } from "react-icons/fi";
 import { CalloutChip } from "../../utils/CalloutChip";
 import { Card } from "../../utils/Card";
+import { scrollToForm } from "@/components/utils/scrollToForm";
 
 export const MiniCard1 = () => {
   return (
@@ -18,7 +19,7 @@ export const MiniCard1 = () => {
           consistent cashflow for every subcontractor we work with.
         </p>
 
-        <BubbleButton className="mx-auto">Learn more</BubbleButton>
+        <BubbleButton onClick={()=> scrollToForm()} className="mx-auto">Learn more</BubbleButton>
 
         <FreightPing />
       </Card>
