@@ -39,7 +39,7 @@ export default function SubcontractorsLanding() {
           </p>
 
           {/* Country Buttons */}
-          <div className="mb-12 grid gap-6 sm:grid-cols-3">
+          <div className="mb-12 grid gap-6 grid-cols-3">
             {countries.map((country) => (
               <GhostButton
                 key={country.name}
