@@ -9,7 +9,7 @@ import { scrollToForm } from "@/components/utils/scrollToForm";
 export const MiniCard1 = () => {
   return (
     <div className="col-span-2 h-[375px] md:col-span-1">
-      <Card>
+      <Card className="relative overflow-visible">
         <CalloutChip>Fair payment terms</CalloutChip>
         <p className="mb-1.5 text-center text-2xl">
           Reliable payments you can count on
@@ -19,9 +19,15 @@ export const MiniCard1 = () => {
           consistent cashflow for every subcontractor we work with.
         </p>
 
-        <BubbleButton onClick={()=> scrollToForm()} className="mx-auto">Learn more</BubbleButton>
-
+        {/* Move button after FreightPing for stacking */}
         <FreightPing />
+
+        <BubbleButton
+          onClick={() => scrollToForm()}
+          className="absolute bottom-4 left-1/2 z-20 -translate-x-1/2"
+        >
+          Learn more
+        </BubbleButton>
       </Card>
     </div>
   );
