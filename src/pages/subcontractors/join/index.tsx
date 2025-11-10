@@ -1,6 +1,7 @@
 "use client";
 
 import { GhostButton } from "@/components/buttons/GhostButton";
+import { SplashButton } from "@/components/buttons/SplashButton";
 import { Stats } from "@/components/features/stats/Stats";
 import { FiftyFiftyCard } from "@/components/fiftyFiftyCard/fiftyFiftyCard";
 import Footer from "@/components/footer/Footer";
@@ -118,12 +119,12 @@ export default function JoinPartner() {
               <FiArrowRight />
             </a>
 
-            <GhostButton
+            <SplashButton
               onClick={scrollToForm}
               className="rounded-md px-4 py-2 text-lg text-zinc-100"
             >
               Join as a Partner
-            </GhostButton>
+            </SplashButton>
           </motion.div>
         </MaxWidthWrapper>
       </section>

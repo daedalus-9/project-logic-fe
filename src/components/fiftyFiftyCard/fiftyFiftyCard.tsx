@@ -14,17 +14,20 @@ import { scrollToForm } from "../utils/scrollToForm";
 
 export const FiftyFiftyCard = () => {
   return (
-    <section className="mx-auto mb-12 mt-24 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
-      <Left />
-      <Right />
+    <>
+      <section className="mx-auto mb-12 mt-24 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
+        <Left />
+        <Right />
+      </section>
       <SplashButton
+
         onClick={() => scrollToForm()}
-        className="mx-auto mt-10 flex items-center gap-2"
+        className="mx-auto mt-10 flex items-center gap-2 bg-emerald-500"
       >
         Get started
         <FiArrowRight />
       </SplashButton>
-    </section>
+    </>
   );
 };
 
