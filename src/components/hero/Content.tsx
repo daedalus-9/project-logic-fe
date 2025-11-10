@@ -23,21 +23,21 @@ const Content = () => {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.25, delay: 0.25, ease: "easeInOut" }}
-        className="mb-4 text-3xl font-bold leading-tight text-zinc-50 sm:text-4xl md:text-5xl lg:text-7xl"
+        className="mb-4 text-3xl font-bold leading-tight text-zinc-50 sm:text-4xl md:text-5xl lg:text-6xl"
       >
-        Connecting loads with the right hauliers
+        Logic Freight – UK Haulage & Return Loads
       </motion.h1>
 
       <motion.p
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.25, delay: 0.5, ease: "easeInOut" }}
-        className="mb-9 max-w-2xl text-base text-zinc-400 sm:text-lg md:text-xl"
+        className="mb-9 max-w-xl text-base text-zinc-400 sm:text-lg md:text-xl"
       >
-        At <strong>Logic Freight</strong>, we connect customers with vetted
-        haulage partners — identifying return loads to save fuel, reduce costs,
-        and minimise empty miles. Your freight, delivered on time, on budget, on
-        demand.
+        Tap into our network of 2,500+ trusted drivers and fleet partners.{" "}
+        <strong>Logic Freight</strong> connects your loads across the UK and
+        helps subcontractors access regular work - delivered on time, on budget,
+        and on demand.
       </motion.p>
 
       <motion.div
