@@ -12,7 +12,8 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 export const metadata = {
-  title: "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
+  title:
+    "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
   description:
     "Join the Logic Freight Partner Network and access consistent UK subcontract haulage and return load opportunities. Keep your trucks earning with verified backloads and national freight work across England, Scotland, and Wales.",
   keywords: [
@@ -37,7 +38,8 @@ export const metadata = {
     "UK transport partnerships",
   ],
   openGraph: {
-    title: "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
+    title:
+      "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
     description:
       "Partner with Logic Freight and start receiving verified UK return loads and subcontract haulage opportunities. Join a trusted nationwide haulier network today.",
     url: "https://www.logicfreight.co.uk/subcontractors/join",
@@ -55,13 +57,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
+    title:
+      "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
     description:
       "Connect with verified haulage work, return loads, and backloads across the UK. Keep your trucks moving and earning as part of the Logic Freight Partner Network.",
     images: ["/assets/images/truck_bg.jpg"],
   },
 };
-
 
 export default function JoinPartner() {
   const formRef = useRef<HTMLDivElement>(null);
@@ -89,8 +91,7 @@ export default function JoinPartner() {
             transition={{ duration: 1 }}
             className="text-4xl font-bold sm:text-5xl md:text-6xl"
           >
-            Join the Logic Freight Partner Network – Get Subcontract Haulage
-            Work Across the UK
+            Join the Logic Freight Partner Network
           </motion.h1>
 
           <motion.p
@@ -99,10 +100,9 @@ export default function JoinPartner() {
             transition={{ duration: 1, delay: 0.2 }}
             className="max-w-2xl text-zinc-300 sm:text-lg md:text-xl"
           >
-            Become part of our trusted UK haulage network. Logic Freight
-            connects owner drivers and subcontractors with verified return
-            loads, backloads, and full or part haulage opportunities — helping
-            you reduce empty miles and keep your trucks earning every day.
+            Get regular subcontract haulage work and verified return loads
+            across the UK. Keep your trucks full, reduce empty miles, and grow
+            within a trusted national network.
           </motion.p>
 
           <motion.div
