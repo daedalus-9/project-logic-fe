@@ -37,7 +37,7 @@ export const metadata = {
     title: "Wales Haulage & Return Loads | Logic Freight",
     description:
       "Haulage work and subcontract opportunities across Wales. Logic Freight connects you with return loads from Cardiff, Swansea, and Wrexham to major UK cities.",
-    url: "https://www.logicfreight.co.uk/wales",
+    url: "https://www.logic-freight.co.uk/subcontractors/wales",
     siteName: "Logic Freight",
     images: [
       {

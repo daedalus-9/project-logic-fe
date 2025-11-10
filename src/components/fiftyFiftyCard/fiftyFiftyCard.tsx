@@ -1,10 +1,6 @@
 "use client";
 
-import {
- 
-  motion,
-  MotionConfig
-} from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import React, {
   Dispatch,
   MouseEventHandler,
@@ -13,12 +9,21 @@ import React, {
 } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
+import { SplashButton } from "../buttons/SplashButton";
+import { scrollToForm } from "../utils/scrollToForm";
 
 export const FiftyFiftyCard = () => {
   return (
-    <section className="mx-auto mt-24 mb-12 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
+    <section className="mx-auto mb-12 mt-24 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
       <Left />
       <Right />
+      <SplashButton
+        onClick={() => scrollToForm()}
+        className="mx-auto mt-10 flex items-center gap-2"
+      >
+        Get started
+        <FiArrowRight />
+      </SplashButton>
     </section>
   );
 };
@@ -30,14 +35,12 @@ const Left = () => (
         <span className="text-emerald-300">How It Works </span>
         with Logic Freight
       </h1>
-      <p className="mt-4 max-w-md text-neutral-400 text-lg">
+      <p className="mt-4 max-w-md text-lg text-neutral-400">
         A simple 3-step process to keep your vehicles on the road and earning.
       </p>
     </div>
   </div>
 );
-
-
 
 const Right = () => {
   const [idx, setIdx] = useState(0);

@@ -12,13 +12,6 @@ export const FeatureGrid = () => {
       <Content />
       <CornerBlur />
       <CornerGrid />
-      <SplashButton
-        onClick={() => scrollToForm()}
-        className="mx-auto my-10 flex items-center gap-2"
-      >
-        Get started
-        <FiArrowRight />
-      </SplashButton>
     </div>
   );
 };

@@ -38,7 +38,7 @@ export const metadata = {
     title: "England Haulage & Return Loads | Logic Freight",
     description:
       "Join Logic Freight’s trusted subcontractor network. We connect English hauliers with consistent return loads and UK-wide haulage work.",
-    url: "https://www.logicfreight.co.uk/england",
+    url: "https://www.logic-freight.co.uk/subcontractors/england",
     siteName: "Logic Freight",
     images: [
       {

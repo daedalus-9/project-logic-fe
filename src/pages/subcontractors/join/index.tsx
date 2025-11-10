@@ -1,6 +1,8 @@
 "use client";
 
 import { GhostButton } from "@/components/buttons/GhostButton";
+import { Stats } from "@/components/features/stats/Stats";
+import { FiftyFiftyCard } from "@/components/fiftyFiftyCard/fiftyFiftyCard";
 import Footer from "@/components/footer/Footer";
 import { PartnerJoinForm } from "@/components/partnerJoinForm/PartnerJoinForm";
 
@@ -9,42 +11,42 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 export const metadata = {
-  title: "Join Logic Freight | UK Haulage Subcontractor & Owner Driver Network",
+  title: "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
   description:
-    "Become a Logic Freight partner and access consistent UK haulage opportunities. We connect subcontractors, hauliers, and owner drivers with verified return loads, full and part loads across England, Scotland, and Wales.",
+    "Join the Logic Freight Partner Network and access consistent UK subcontract haulage and return load opportunities. Keep your trucks earning with verified backloads and national freight work across England, Scotland, and Wales.",
   keywords: [
     "join haulage network",
-    "haulage subcontractor opportunities",
-    "UK haulage partners",
-    "owner drivers wanted",
+    "UK haulage subcontractors",
+    "owner drivers wanted UK",
+    "subcontract haulage work",
     "return loads UK",
-    "return loads Scotland",
-    "haulage work UK",
-    "lorry subcontractor",
-    "freight subcontractor",
-    "tautliner haulage jobs",
-    "flatbed subcontractors",
-    "curtainsider work",
+    "backloads UK",
+    "haulage jobs for owner drivers",
+    "lorry subcontractor work",
+    "freight subcontractor opportunities",
+    "UK logistics partnerships",
+    "HGV subcontractors",
+    "haulage work England",
+    "haulage work Scotland",
+    "haulage work Wales",
+    "tautliner subcontractors",
+    "flatbed haulage work",
+    "curtainsider subcontractor jobs",
+    "freight exchange alternative UK",
     "UK transport partnerships",
-    "HGV owner driver",
-    "haulage company partnerships",
-    "general haulage work",
-    "subcontract haulage UK",
-    "freight exchange UK",
-    "join logistics network",
   ],
   openGraph: {
-    title: "Join Logic Freight | UK Haulage Partner Network",
+    title: "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
     description:
-      "Partner with Logic Freight and start receiving return load and subcontract haulage opportunities across the UK. Join a trusted nationwide haulier network today.",
-    url: "https://www.logicfreight.co.uk/join-partner",
+      "Partner with Logic Freight and start receiving verified UK return loads and subcontract haulage opportunities. Join a trusted nationwide haulier network today.",
+    url: "https://www.logicfreight.co.uk/subcontractors/join",
     siteName: "Logic Freight",
     images: [
       {
-        url: "/assets/images/logo.png",
+        url: "/assets/images/truck_bg.jpg",
         width: 1200,
         height: 630,
-        alt: "Join Logic Freight Haulage Network",
+        alt: "Join Logic Freight Haulage Partner Network",
       },
     ],
     locale: "en_GB",
@@ -52,13 +54,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Join Logic Freight | UK Haulage Partner Network",
+    title: "Join Logic Freight Partner Network | UK Haulage Subcontractors & Owner Drivers",
     description:
-      "Connect with verified haulage work and return loads. Logic Freight helps subcontractors and owner drivers across the UK keep their trucks full and moving.",
-    images: ["/assets/images/logo.png"],
+      "Connect with verified haulage work, return loads, and backloads across the UK. Keep your trucks moving and earning as part of the Logic Freight Partner Network.",
+    images: ["/assets/images/truck_bg.jpg"],
   },
 };
- 
+
 
 export default function JoinPartner() {
   const formRef = useRef<HTMLDivElement>(null);
@@ -72,26 +74,34 @@ export default function JoinPartner() {
   return (
     <main className="relative flex min-h-screen flex-col bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-zinc-50">
       {/* Hero Section */}
-      <section className="flex h-screen items-center justify-center px-6 text-center">
-        <MaxWidthWrapper className="flex flex-col items-center gap-6">
+      <section
+        className="relative flex h-screen items-center justify-center bg-cover bg-center px-6 text-center"
+        style={{ backgroundImage: "url('/assets/images/truck_bg.jpg')" }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <MaxWidthWrapper className="relative z-10 flex flex-col items-center gap-6">
           <motion.h1
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="text-4xl font-bold sm:text-5xl md:text-6xl"
           >
-            Join Our Subcontractor Network
+            Join the Logic Freight Partner Network – Get Subcontract Haulage
+            Work Across the UK
           </motion.h1>
 
           <motion.p
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="max-w-2xl text-zinc-400 sm:text-lg md:text-xl"
+            className="max-w-2xl text-zinc-300 sm:text-lg md:text-xl"
           >
-            Logic Freight partners with vetted Partners across the UK. Fill out
-            your details to join our network and start getting haulage
-            opportunities.
+            Become part of our trusted UK haulage network. Logic Freight
+            connects owner drivers and subcontractors with verified return
+            loads, backloads, and full or part haulage opportunities — helping
+            you reduce empty miles and keep your trucks earning every day.
           </motion.p>
 
           <motion.div
@@ -122,6 +132,8 @@ export default function JoinPartner() {
       <div ref={formRef} id="join-form" className="px-6 pb-24">
         <PartnerJoinForm />
       </div>
+      <Stats />
+      <FiftyFiftyCard />
     </main>
   );
 }

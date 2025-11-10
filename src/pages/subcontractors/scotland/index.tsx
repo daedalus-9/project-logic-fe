@@ -39,7 +39,7 @@ export const metadata = {
     title: "Scotland Haulage & Return Loads | Logic Freight",
     description:
       "Join Logic Freight’s trusted subcontractor network. We connect Scottish hauliers with consistent return loads and UK-wide haulage work.",
-    url: "https://www.logicfreight.co.uk/scotland",
+    url: "https://www.logic-freight.co.uk/subcontractors/scotland",
     siteName: "Logic Freight",
     images: [
       {
