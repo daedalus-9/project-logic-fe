@@ -43,7 +43,7 @@ const Content = () => {
           transition={{ duration: 1.25, delay: 0.5, ease: "easeInOut" }}
           className="mb-10 max-w-2xl text-base text-zinc-400 sm:text-lg md:text-xl"
         >
-          Logic Freight connects shippers and subcontractors across England —
+          Logic Freight connects shippers and subcontractors across England -
           from London to Manchester. Whether you’re moving pallets, containers,
           or general haulage, we match you with vetted partners ready to move.
         </motion.p>

@@ -39,7 +39,7 @@ const Content = () => {
         className="mb-9 max-w-xl text-base text-zinc-400 sm:text-lg md:text-xl"
       >
         <strong>Logic Freight</strong> connects shippers and hauliers with
-        verified <strong>UK return loads</strong> and backloads — helping reduce
+        verified <strong>UK return loads</strong> and backloads, helping reduce
         empty miles, cut fuel costs, and maximise efficiency. With a network of
         over <strong>2,500 trusted drivers and fleet partners</strong> across
         England, Scotland, and Wales, we keep your freight moving nationwide, on

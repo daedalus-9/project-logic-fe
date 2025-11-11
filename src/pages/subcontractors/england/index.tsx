@@ -85,7 +85,7 @@ export default function England() {
 
       <CoverageAreas
         title="England Haulage"
-        description="Logic Freight connects England’s busiest logistics hubs — from London to Manchester — to key cities across Scotland and Wales. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
+        description="Logic Freight connects England’s busiest logistics hubs - from London to Manchester - to key cities across Scotland and Wales. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
         areas={englandRoutes}
         region="England"
       />

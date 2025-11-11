@@ -22,7 +22,7 @@ export const Tower = () => {
         <p className="mb-2 text-2xl">Relationships that move freight</p>
         <p className="mb-8 text-zinc-400">
           Behind every load is a real conversation. We build lasting
-          relationships with our partners — supporting them with fairness,
+          relationships with our partners, supporting them with fairness,
           clarity, and real people who care.
         </p>
 

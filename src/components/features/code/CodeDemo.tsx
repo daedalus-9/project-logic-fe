@@ -26,7 +26,7 @@ export const CodeDemo = () => {
             Keep your trucks and loads moving across the UK
           </SectionHeading>
           <SectionSubheading persistCenter>
-            Logic Freight connects hauliers and customers seamlessly — helping you reduce empty miles, save fuel, and maximise efficiency.
+            Logic Freight connects hauliers and customers seamlessly helping you reduce empty miles, save fuel, and maximise efficiency.
           </SectionSubheading>
         </SectionHeadingSpacing>
 

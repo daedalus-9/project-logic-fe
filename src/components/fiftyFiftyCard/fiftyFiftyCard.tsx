@@ -207,7 +207,7 @@ const CONTENT = [
         </p>
         <p>
           After approval, we connect you with full or part-load haulage jobs
-          across the UK — tailored to your route and availability.
+          across the UK, tailored to your route and availability.
         </p>
       </>
     ),
@@ -220,7 +220,7 @@ const CONTENT = [
         </p>
         <p>
           Fill your return legs with paying loads and maximise efficiency. Your
-          vehicles stay on the road — and you stay profitable.
+          vehicles stay on the road, and you stay profitable.
         </p>
       </>
     ),

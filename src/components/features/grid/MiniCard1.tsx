@@ -15,7 +15,7 @@ export const MiniCard1 = () => {
           Reliable payments you can count on
         </p>
         <p className="mb-6 text-center text-zinc-400">
-          We believe trust starts with transparency — fair payment terms and
+          We believe trust starts with transparency, fair payment terms and
           consistent cashflow for every subcontractor we work with.
         </p>
 

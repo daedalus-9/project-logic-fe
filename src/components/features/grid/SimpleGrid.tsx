@@ -13,7 +13,7 @@ export const SimpleGrid = () => (
     <Item
       Icon={TbCurrencyPound}
       title="Fair, fast payment terms"
-      subtitle="Paid on time, every time — we make sure subcontractors get treated right."
+      subtitle="Paid on time, every time, we make sure subcontractors get treated right."
     />
     <Item
       Icon={FiClock}
@@ -23,7 +23,7 @@ export const SimpleGrid = () => (
     <Item
       Icon={FiBox}
       title="Trusted loads & vetted partners"
-      subtitle="Work only with verified hauliers and reliable customers — trust built into every job."
+      subtitle="Work only with verified hauliers and reliable customers, trust built into every job."
     />
     <Item
       Icon={FiMapPin}
@@ -33,7 +33,7 @@ export const SimpleGrid = () => (
     <Item
       Icon={FiZap}
       title="Smart matching technology"
-      subtitle="Our intelligent system connects return loads with available vehicles in real time — cutting fuel waste and maximising capacity."
+      subtitle="Our intelligent system connects return loads with available vehicles in real time, cutting fuel waste and maximising capacity."
     />
   </div>
 );

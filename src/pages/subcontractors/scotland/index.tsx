@@ -90,7 +90,7 @@ export default function Scotland() {
 
       <CoverageAreas
         title="Scotland Haulage"
-        description="Logic Freight connects Scotland’s busiest logistics hubs — from Inverness to the Central Belt — to key cities across England and Wales. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
+        description="Logic Freight connects Scotland’s busiest logistics hubs - from Inverness to the Central Belt - to key cities across England and Wales. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
         areas={scotlandRoutes}
         region="Scotland"
       />

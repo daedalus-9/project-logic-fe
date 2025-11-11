@@ -25,7 +25,7 @@ export const Content = () => {
           </SectionHeading>
           <SectionSubheading>
             Logic Freight connects available trucks with verified return loads
-            across the UK — cutting empty miles, saving fuel, and improving
+            across the UK, cutting empty miles, saving fuel, and improving
             profits for hauliers and subcontractors.
           </SectionSubheading>
         </SectionHeadingSpacing>

@@ -54,7 +54,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Wales Haulage & Return Loads | Logic Freight",
     description:
-      "Find subcontract haulage work and return loads across Wales with Logic Freight — connecting hauliers to full and part load opportunities across the UK.",
+      "Find subcontract haulage work and return loads across Wales with Logic Freight - connecting hauliers to full and part load opportunities across the UK.",
     images: ["/assets/images/logo.png"],
   },
 };
@@ -81,7 +81,7 @@ export default function Wales() {
 
       <CoverageAreas
         title="Wales Haulage"
-        description="Logic Freight connects Wales’ busiest logistics hubs — from Cardiff to Wrexham — to key cities across England and Scotland. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
+        description="Logic Freight connects Wales’ busiest logistics hubs - from Cardiff to Wrexham - to key cities across England and Scotland. Our flatbed and curtain-sider fleet ensures full and part loads move efficiently, reducing empty miles and improving turnaround times."
         areas={walesRoutes}
         region="Wales"
       />

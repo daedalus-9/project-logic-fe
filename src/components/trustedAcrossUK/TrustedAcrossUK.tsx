@@ -40,7 +40,7 @@ export const TrustedAcrossUK = () => {
         className="mx-auto mt-8 max-w-3xl text-center text-base text-zinc-400 md:text-lg"
       >
         Logic Freight connects customers and subcontractors with{" "}
-        <strong>return loads</strong> throughout England, Scotland, and Wales —
+        <strong>return loads</strong> throughout England, Scotland, and Wales,
         reducing empty miles and keeping UK haulage efficient, reliable, and
         sustainable.
       </motion.p>

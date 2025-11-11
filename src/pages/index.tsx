@@ -21,7 +21,7 @@ const barlowFont = Barlow({
 export const metadata = {
   title: "Return Loads | Logic Freight UK Haulage",
   description:
-    "Find reliable UK return loads with Logic Freight — specialists in backloads, full and part loads, and nationwide haulage. Connect with trusted hauliers across England, Scotland, and Wales for cost-effective, on-time transport solutions.",
+    "Find reliable UK return loads with Logic Freight - specialists in backloads, full and part loads, and nationwide haulage. Connect with trusted hauliers across England, Scotland, and Wales for cost-effective, on-time transport solutions.",
   keywords: [
     "return loads",
     "UK return loads",
@@ -51,7 +51,7 @@ export const metadata = {
   openGraph: {
     title: "Return Loads | Logic Freight UK Haulage",
     description:
-      "Logic Freight connects UK return loads with trusted hauliers — reducing empty miles, cutting costs, and delivering reliable nationwide transport solutions.",
+      "Logic Freight connects UK return loads with trusted hauliers - reducing empty miles, cutting costs, and delivering reliable nationwide transport solutions.",
     url: "https://www.logic-freight.co.uk",
     siteName: "Logic Freight",
     images: [
@@ -69,7 +69,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Return Loads | Logic Freight UK Haulage",
     description:
-      "Connecting UK return loads with the right hauliers — specialists in tautliner, flatbed, and curtainsider transport across England, Scotland, and Wales.",
+      "Connecting UK return loads with the right hauliers - specialists in tautliner, flatbed, and curtainsider transport across England, Scotland, and Wales.",
     images: ["/assets/images/logo.png"],
   },
 };
