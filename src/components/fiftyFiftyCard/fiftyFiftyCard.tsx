@@ -1,10 +1,6 @@
 "use client";
 
-import {
- 
-  motion,
-  MotionConfig
-} from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import React, {
   Dispatch,
   MouseEventHandler,
@@ -13,13 +9,24 @@ import React, {
 } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
+import { SplashButton } from "../buttons/SplashButton";
+import { scrollToForm } from "../utils/scrollToForm";
 
 export const FiftyFiftyCard = () => {
   return (
-    <section className="mx-auto mt-24 mb-12 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
-      <Left />
-      <Right />
-    </section>
+    <>
+      <section className="mx-auto mb-12 mt-24 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
+        <Left />
+        <Right />
+      </section>
+      <SplashButton
+        onClick={() => scrollToForm()}
+        className="mx-auto mb-10 mt-6 flex items-center gap-2 bg-emerald-500"
+      >
+        Get started
+        <FiArrowRight />
+      </SplashButton>
+    </>
   );
 };
 
@@ -30,14 +37,12 @@ const Left = () => (
         <span className="text-emerald-300">How It Works </span>
         with Logic Freight
       </h1>
-      <p className="mt-4 max-w-md text-neutral-400 text-lg">
+      <p className="mt-4 max-w-md text-lg text-neutral-400">
         A simple 3-step process to keep your vehicles on the road and earning.
       </p>
     </div>
   </div>
 );
-
-
 
 const Right = () => {
   const [idx, setIdx] = useState(0);
@@ -202,7 +207,7 @@ const CONTENT = [
         </p>
         <p>
           After approval, we connect you with full or part-load haulage jobs
-          across the UK — tailored to your route and availability.
+          across the UK, tailored to your route and availability.
         </p>
       </>
     ),
@@ -215,7 +220,7 @@ const CONTENT = [
         </p>
         <p>
           Fill your return legs with paying loads and maximise efficiency. Your
-          vehicles stay on the road — and you stay profitable.
+          vehicles stay on the road, and you stay profitable.
         </p>
       </>
     ),

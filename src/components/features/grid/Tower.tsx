@@ -22,7 +22,7 @@ export const Tower = () => {
         <p className="mb-2 text-2xl">Relationships that move freight</p>
         <p className="mb-8 text-zinc-400">
           Behind every load is a real conversation. We build lasting
-          relationships with our subcontractors — supporting them with fairness,
+          relationships with our partners, supporting them with fairness,
           clarity, and real people who care.
         </p>
 
@@ -78,25 +78,25 @@ const MockupMain = () => {
   const [matches, setMatches] = useState([
     {
       route: "Birmingham → Manchester",
-      driver: "J. Clarke Transport",
+      driver: "John Smith Logistics",
       time: "Matched 2 mins ago",
       color: "text-green-400",
     },
     {
       route: "Leeds → Bristol",
-      driver: "M. Hughes Logistics",
+      driver: "John Smith Transport",
       time: "Matched 5 mins ago",
       color: "text-blue-400",
     },
     {
       route: "London → Liverpool",
-      driver: "R. Patel Haulage",
+      driver: "John Smith Haulage",
       time: "Matched 8 mins ago",
       color: "text-yellow-400",
     },
     {
       route: "Cardiff → Sheffield",
-      driver: "A. Davies Freight",
+      driver: "John Smith Freight",
       time: "Matched 12 mins ago",
       color: "text-purple-400",
     },
@@ -122,14 +122,11 @@ const MockupMain = () => {
           <span>Recent Load Matches</span>
         </div>
 
-        {matches.map((m, i) => (
+        {matches.map((m) => (
           <motion.div
             layout
             key={m.route}
-            transition={{
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="relative flex flex-col gap-1 py-3 text-xs"
           >
             <div className="flex items-center gap-2">

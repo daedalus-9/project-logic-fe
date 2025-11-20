@@ -13,7 +13,7 @@ export const SimpleGrid = () => (
     <Item
       Icon={TbCurrencyPound}
       title="Fair, fast payment terms"
-      subtitle="Paid on time, every time — we make sure subcontractors get treated right."
+      subtitle="Paid on time, every time, we make sure subcontractors get treated right."
     />
     <Item
       Icon={FiClock}
@@ -23,17 +23,17 @@ export const SimpleGrid = () => (
     <Item
       Icon={FiBox}
       title="Trusted loads & vetted partners"
-      subtitle="Work only with verified hauliers and reliable customers — trust built into every job."
+      subtitle="Work only with verified hauliers and reliable customers, trust built into every job."
     />
     <Item
       Icon={FiMapPin}
       title="Nationwide coverage"
-      subtitle="From Bridgwater to Birmingham and beyond, our network keeps UK freight moving."
+      subtitle="From Inverness to Penzance, Logic Freight keeps the UK’s return load network moving efficiently."
     />
     <Item
       Icon={FiZap}
       title="Smart matching technology"
-      subtitle="Powerful algorithms connect loads with available vehicles to cut empty miles."
+      subtitle="Our intelligent system connects return loads with available vehicles in real time, cutting fuel waste and maximising capacity."
     />
   </div>
 );

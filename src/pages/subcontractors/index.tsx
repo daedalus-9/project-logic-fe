@@ -1,6 +1,6 @@
 import { GhostButton } from "@/components/buttons/GhostButton";
 import { SplashButton } from "@/components/buttons/SplashButton";
-import { EnquiryForm } from "@/components/enquiryForm/EnquiryForm";
+import { PlaceTruckForm } from "@/components/placeTruckForm/PlaceTruckForm";
 import { Stats } from "@/components/features/stats/Stats";
 import Footer from "@/components/footer/Footer";
 import { MaxWidthWrapper } from "@/components/utils/MaxWidthWrapper";
@@ -39,7 +39,7 @@ export default function SubcontractorsLanding() {
           </p>
 
           {/* Country Buttons */}
-          <div className="mb-12 grid gap-6 sm:grid-cols-3">
+          <div className="mb-12 grid gap-6 grid-cols-3">
             {countries.map((country) => (
               <GhostButton
                 key={country.name}
@@ -78,7 +78,7 @@ export default function SubcontractorsLanding() {
 
       {/* Place a Truck / Enquiry Form Section */}
       <section id="quote-form" className="py-24">
-        <EnquiryForm region="UK" />
+        <PlaceTruckForm region="UK" />
       </section>
     </main>
   );

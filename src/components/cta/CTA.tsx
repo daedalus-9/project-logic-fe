@@ -6,6 +6,7 @@ import { GhostButton } from "../buttons/GhostButton";
 import { SplashButton } from "../buttons/SplashButton";
 import { GlowingChip } from "../utils/GlowingChip";
 import { MaxWidthWrapper } from "../utils/MaxWidthWrapper";
+import { scrollToForm } from "../utils/scrollToForm";
 
 export const CTA = () => {
   const router = useRouter();
@@ -37,17 +38,17 @@ export const CTA = () => {
           className="flex flex-col items-center gap-4 sm:flex-row"
         >
           <SplashButton
-            onClick={() => router.push("/contact")}
+            onClick={() => scrollToForm()}
             className="flex items-center gap-2"
           >
             Get started
             <FiArrowRight />
           </SplashButton>
           <GhostButton
-            onClick={() => router.push("/#stats")}
+            onClick={() => router.push("/subcontractors")}
             className="rounded-md px-4 py-2 text-lg text-zinc-100"
           >
-            See our stats
+            Place a Truck
           </GhostButton>
         </motion.div>
       </MaxWidthWrapper>

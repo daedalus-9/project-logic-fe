@@ -22,7 +22,7 @@ export const LongCard = () => {
           <p className="mb-1.5 text-2xl">Decades in the driver’s seat</p>
           <p className="max-w-sm text-zinc-400">
             With over a century of combined experience in UK logistics, we know
-            the roads, the routes, and the realities of moving freight right —
+            the roads, the routes, and the realities of moving freight right,
             every single time.
           </p>
         </div>
