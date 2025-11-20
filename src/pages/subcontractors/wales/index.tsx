@@ -35,7 +35,7 @@ export default function Wales() {
 
       <EnquiryForm region="Wales" />
       <GradientGrid />
-      <Footer />
+ 
     </main>
   );
 }
